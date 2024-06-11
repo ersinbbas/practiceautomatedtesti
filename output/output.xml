@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-06-11T14:38:29.006057" rpa="false" schemaversion="5">
+<suite id="s1" name="Example3" source="C:\Dev\Project\Python_RobotFr\tests\example3.robot">
+<kw name="Open de Browser en Website" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-11T14:38:29.133715" level="INFO">Opening browser 'chrome' to base url 'https://www.practiceautomatedtesting.com/webelements/AlertPage'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-11T14:38:29.133715" elapsed="1.669467"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-11T14:38:30.804265" level="INFO">Opened practiceautomated testing Alert Page</msg>
+<arg>Opened practiceautomated testing Alert Page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-11T14:38:30.804265" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-11T14:38:30.804265" elapsed="0.029794"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-11T14:38:32.834181" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-11T14:38:30.834059" elapsed="2.000122"/>
+</kw>
+<status status="PASS" start="2024-06-11T14:38:29.132539" elapsed="3.701642"/>
+</kw>
+<test id="s1-t1" name="Handle Show Alert" line="25">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Show_Alert}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T14:38:32.834686" elapsed="0.019013"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-11T14:38:32.854697" level="INFO">Clicking button 'xpath=//button[contains(text(),'Show Alert')]'.</msg>
+<arg>${Show_Alert}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T14:38:32.853699" elapsed="0.083512"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-11T14:38:32.938210" level="INFO">Show Alert button clicked</msg>
+<arg>Show Alert button clicked</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-11T14:38:32.937211" elapsed="0.000999"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-11T14:38:34.938707" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-11T14:38:32.938210" elapsed="2.000497"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-06-11T14:38:34.939351" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2024-06-11T14:38:34.944367" level="INFO">${alert_message1} = This is a JavaScript alert!</msg>
+<var>${alert_message1}</var>
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-06-11T14:38:34.939351" elapsed="0.006008"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-11T14:38:34.945359" level="INFO">This is a JavaScript alert!</msg>
+<arg>${alert_message1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-11T14:38:34.945359" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-11T14:38:34.946366" level="INFO">Alert button found en accepted</msg>
+<arg>Alert button found en accepted</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-11T14:38:34.946366" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-11T14:38:36.947609" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-11T14:38:34.946366" elapsed="2.001243"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-11T14:38:36.948723" level="INFO">Alert is visible en accepted</msg>
+<arg>Alert is visible en accepted</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-11T14:38:36.948723" elapsed="0.000000"/>
+</kw>
+<arg>'${alert_message1}' == 'This is a JavaScript alert!'</arg>
+<arg>Log</arg>
+<arg>Alert is visible en accepted</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>Alert is not visible</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-11T14:38:36.947609" elapsed="0.001114"/>
+</kw>
+<doc>Open my learnportal and handle the alerts</doc>
+<status status="PASS" start="2024-06-11T14:38:32.834686" elapsed="4.115044"/>
+</test>
+<test id="s1-t2" name="Handle Show Confirm" line="44">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Show_Confirm}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T14:38:36.950730" elapsed="0.017605"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-11T14:38:36.969340" level="INFO">Clicking button 'xpath=//button[contains(text(),'Show Confirm')]'.</msg>
+<arg>${Show_Confirm}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T14:38:36.968335" elapsed="0.054109"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-11T14:38:37.023445" level="INFO">Show Confirm button clicked</msg>
+<arg>Show Confirm button clicked</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-11T14:38:37.023445" elapsed="0.000000"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-06-11T14:38:37.023810" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2024-06-11T14:38:37.027968" level="INFO">${alert_message2} = Do you confirm this action?</msg>
+<var>${alert_message2}</var>
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-06-11T14:38:37.023810" elapsed="0.004158"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-11T14:38:37.028965" level="INFO">Do you confirm this action?</msg>
+<arg>${alert_message2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-11T14:38:37.028965" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-11T14:38:37.029966" level="INFO">Confirm button found en accepted</msg>
+<arg>Confirm button found en accepted</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-11T14:38:37.028965" elapsed="0.001001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-11T14:38:38.030095" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-11T14:38:37.029966" elapsed="1.000388"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-11T14:38:38.031480" level="INFO">Confirm button is visible en accepted</msg>
+<arg>Confirm button is visible en accepted</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-11T14:38:38.031480" elapsed="0.000000"/>
+</kw>
+<arg>'${alert_message2}' == 'Do you confirm this action?'</arg>
+<arg>Log</arg>
+<arg>Confirm button is visible en accepted</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>confirm button is not visible</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-11T14:38:38.030354" elapsed="0.001126"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-11T14:38:39.033115" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-11T14:38:38.032479" elapsed="1.001247"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-06-11T14:38:39.035963" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2024-06-11T14:38:39.046215" level="INFO">${alert_message3} = User confirmed: true</msg>
+<var>${alert_message3}</var>
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-06-11T14:38:39.035963" elapsed="0.010252"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-11T14:38:39.048219" level="INFO">User confirmed: true</msg>
+<arg>${alert_message3}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-11T14:38:39.047216" elapsed="0.001003"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-11T14:38:39.049498" level="INFO">Second button is visible en accepted</msg>
+<arg>Second button is visible en accepted</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-11T14:38:39.049498" elapsed="0.000000"/>
+</kw>
+<arg>'${alert_message3}' == 'User confirmed: true'</arg>
+<arg>Log</arg>
+<arg>Second button is visible en accepted</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>second button is not visible</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-11T14:38:39.048936" elapsed="0.000562"/>
+</kw>
+<status status="PASS" start="2024-06-11T14:38:36.950730" elapsed="2.099783"/>
+</test>
+<test id="s1-t3" name="Handle Show Prompt" line="65">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Show_Prompt}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-11T14:38:39.052535" elapsed="0.025377"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-11T14:38:39.079041" level="INFO">Clicking button 'xpath=//button[contains(text(),'Show Prompt')]'.</msg>
+<arg>${Show_Prompt}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-11T14:38:39.078534" elapsed="0.095660"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-11T14:38:39.174194" level="INFO">Prompt button clicked</msg>
+<arg>Prompt button clicked</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-11T14:38:39.174194" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text Into Alert" owner="SeleniumLibrary">
+<arg>${Show_Prompt_InputText}</arg>
+<doc>Types the given ``text`` into an input field in an alert.</doc>
+<status status="PASS" start="2024-06-11T14:38:39.175189" elapsed="0.005000"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2024-06-11T14:38:39.181190" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
+<msg time="2024-06-11T14:38:39.189280" level="INFO">${alert_message4} = User input: practiceautomatedtesting.com</msg>
+<var>${alert_message4}</var>
+<arg>ACCEPT</arg>
+<arg>5s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2024-06-11T14:38:39.181190" elapsed="0.008090"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-11T14:38:39.189280" level="INFO">User input: practiceautomatedtesting.com</msg>
+<arg>${alert_message4}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-11T14:38:39.189280" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-11T14:38:41.191749" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-11T14:38:39.190287" elapsed="2.001975"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-11T14:38:41.193288" level="INFO">Show Prompt button did not accept with input</msg>
+<arg>Show Prompt button did not accept with input</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-11T14:38:41.193288" elapsed="0.000000"/>
+</kw>
+<arg>'${alert_message4}' == 'User input: '+ '${alert_message4}'</arg>
+<arg>Log</arg>
+<arg>Show Prompt button accepted with input</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>Show Prompt button did not accept with input</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-11T14:38:41.193288" elapsed="0.001091"/>
+</kw>
+<status status="PASS" start="2024-06-11T14:38:39.051520" elapsed="2.142859"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-11T14:38:41.196279" elapsed="2.292115"/>
+</kw>
+<status status="PASS" start="2024-06-11T14:38:29.008099" elapsed="14.480295"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Example3">Example3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
