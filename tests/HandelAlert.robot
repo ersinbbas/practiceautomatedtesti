@@ -79,4 +79,4 @@ Handle Show Prompt
     
 
 
-# Run keyword in the Terminal : robot -d output tests/example3.robot
+# Run keyword in the Terminal : robot -d output tests/HandelAlert.robot

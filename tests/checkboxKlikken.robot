@@ -38,4 +38,4 @@ Click Checkbox
     ...    ELSE    Log    Checkbox1 is not clicked
 
 
-# Run keyword in the Terminal : robot -d output tests/example2.robot
+# Run keyword in the Terminal : robot -d output tests/checkboxKlikken.robot
