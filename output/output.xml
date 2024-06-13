@@ -1,103 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-06-12T14:32:41.297321" rpa="false" schemaversion="5">
-<suite id="s1" name="NestedFramePage" source="C:\Dev\Project\Python_RobotFr\tests\NestedFramePage.robot">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-06-13T16:36:36.520147" rpa="false" schemaversion="5">
+<suite id="s1" name="SelectBoxPage" source="C:\Dev\Project\Python_RobotFr\tests\SelectBoxPage.robot">
 <kw name="Open de Browser en Website" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-12T14:32:41.414326" level="INFO">Opening browser 'chrome' to base url 'https://www.practiceautomatedtesting.com/webelements/NestedFramePage'.</msg>
+<msg time="2024-06-13T16:36:36.647406" level="INFO">Opening browser 'chrome' to base url 'https://www.practiceautomatedtesting.com/webelements/SelectBoxPage'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-12T14:32:41.414326" elapsed="1.835994"/>
+<status status="PASS" start="2024-06-13T16:36:36.647406" elapsed="1.663798"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-06-12T14:32:43.250320" level="INFO">Opened practiceautomated testing nested frame page</msg>
-<arg>Opened practiceautomated testing nested frame page</arg>
+<msg time="2024-06-13T16:36:38.311204" level="INFO">Opened practiceautomated testing scroll button page</msg>
+<arg>Opened practiceautomated testing scroll button page</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-12T14:32:43.250320" elapsed="0.000000"/>
+<status status="PASS" start="2024-06-13T16:36:38.311204" elapsed="0.001006"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-12T14:32:43.250320" elapsed="0.033251"/>
+<status status="PASS" start="2024-06-13T16:36:38.312210" elapsed="0.032164"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-12T14:32:46.284324" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-06-13T16:36:40.345076" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T16:36:38.344374" elapsed="2.000702"/>
+</kw>
+<status status="PASS" start="2024-06-13T16:36:36.647406" elapsed="3.697670"/>
+</kw>
+<test id="s1-t1" name="Select a Box and Check it" line="42">
+<kw name="Select a Box">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SelectBox}</arg>
 <arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-12T14:32:43.283571" elapsed="3.000753"/>
-</kw>
-<status status="PASS" start="2024-06-12T14:32:41.414326" elapsed="4.869998"/>
-</kw>
-<test id="s1-t1" name="Test Nested Frame" line="40">
-<kw name="Switch To Iframe And Verify Text">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2024-06-12T14:32:56.729379" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-06-12T14:32:56.729379" level="FAIL">Element '//iframe [1]' not visible after 10 seconds.</msg>
-<arg>${TOP_IFRAME}</arg>
-<arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-06-12T14:32:46.287355" elapsed="10.442024">Element '//iframe [1]' not visible after 10 seconds.</status>
+<status status="PASS" start="2024-06-13T16:36:40.345076" elapsed="0.021405"/>
 </kw>
-<kw name="Select Frame" owner="SeleniumLibrary">
-<arg>${TOP_IFRAME}</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<status status="NOT RUN" start="2024-06-12T14:32:56.729379" elapsed="0.000000"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<arg>Switched to iframe with title 'top'</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-06-12T14:32:56.729379" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${FRAME_TEXT}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-06-12T14:32:56.729379" elapsed="0.000000"/>
-</kw>
-<kw name="Get WebElement" owner="SeleniumLibrary">
-<var>${frame_text}</var>
-<arg>${FRAME_TEXT}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="NOT RUN" start="2024-06-12T14:32:56.729379" elapsed="0.000000"/>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-06-13T16:36:40.366481" level="INFO">Selecting options from selection list 'xpath://select' by value Option 2.</msg>
+<arg>xpath:${SelectBox}</arg>
+<arg>${Option}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-06-13T16:36:40.366481" elapsed="0.049560"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<arg>Frame text 'Top Frame' found: ${frame_text}</arg>
+<msg time="2024-06-13T16:36:40.417041" level="INFO">Selected 'Option 2'</msg>
+<arg>Selected 'Option 2'</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-06-12T14:32:56.729379" elapsed="0.000000"/>
-</kw>
-<kw name="Mouse Over" owner="SeleniumLibrary">
-<arg>${frame_text}</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="NOT RUN" start="2024-06-12T14:32:56.729379" elapsed="0.000000"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<arg>Hover action performed on the text element</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-06-12T14:32:56.729379" elapsed="0.000000"/>
-</kw>
-<status status="FAIL" start="2024-06-12T14:32:46.286356" elapsed="10.443023">Element '//iframe [1]' not visible after 10 seconds.</status>
+<status status="PASS" start="2024-06-13T16:36:40.417041" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<arg>3</arg>
+<msg time="2024-06-13T16:36:42.418363" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-06-12T14:32:56.729379" elapsed="0.000000"/>
+<status status="PASS" start="2024-06-13T16:36:40.417041" elapsed="2.001322"/>
 </kw>
-<doc>Test switching to a nested iframe and verifying text inside it</doc>
-<status status="FAIL" start="2024-06-12T14:32:46.284324" elapsed="10.445055">Element '//iframe [1]' not visible after 10 seconds.</status>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Result_Text}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T16:36:42.418363" elapsed="0.016418"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T16:36:42.444766" level="INFO">${Result} = You selected: Option 2</msg>
+<var>${Result}</var>
+<arg>${Result_Text}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T16:36:42.434781" elapsed="0.009985"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-13T16:36:42.444766" level="INFO">Selected the option 1</msg>
+<arg>Selected the option 1</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-13T16:36:42.444766" elapsed="0.000000"/>
+</kw>
+<arg>'${Result}' == 'You selected: Option 2'</arg>
+<arg>Log</arg>
+<arg>Selected the option 1</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>failed: The result is correct.</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-06-13T16:36:42.444766" elapsed="0.000000"/>
+</kw>
+<doc>Scroll a button and verifying the result</doc>
+<status status="PASS" start="2024-06-13T16:36:40.345076" elapsed="2.099690"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T16:36:44.445428" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T16:36:42.444766" elapsed="2.000897"/>
+</kw>
+<doc>Scroll to button and verifying the action</doc>
+<status status="PASS" start="2024-06-13T16:36:40.345076" elapsed="4.101282"/>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-12T14:32:56.729379" elapsed="2.732655"/>
+<status status="PASS" start="2024-06-13T16:36:44.450369" elapsed="2.144299"/>
 </kw>
-<status status="FAIL" start="2024-06-12T14:32:41.297321" elapsed="18.164713"/>
+<status status="PASS" start="2024-06-13T16:36:36.520147" elapsed="10.074521"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="NestedFramePage">NestedFramePage</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="SelectBoxPage">SelectBoxPage</stat>
 </suite>
 </statistics>
 <errors>
