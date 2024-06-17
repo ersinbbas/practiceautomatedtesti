@@ -1,114 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-06-13T16:36:36.520147" rpa="false" schemaversion="5">
-<suite id="s1" name="SelectBoxPage" source="C:\Dev\Project\Python_RobotFr\tests\SelectBoxPage.robot">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-06-17T09:21:24.878282" rpa="false" schemaversion="5">
+<suite id="s1" name="NestedFramePage" source="C:\Dev\Project\Python_RobotFr\tests\NestedFramePage.robot">
 <kw name="Open de Browser en Website" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-13T16:36:36.647406" level="INFO">Opening browser 'chrome' to base url 'https://www.practiceautomatedtesting.com/webelements/SelectBoxPage'.</msg>
+<msg time="2024-06-17T09:21:25.008496" level="INFO">Opening browser 'geckodriver' to base url 'https://www.practiceautomatedtesting.com/webelements/NestedFramePage'.</msg>
+<msg time="2024-06-17T09:21:25.008496" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-06-17T09:21:25.008496" level="FAIL">ValueError: geckodriver is not a supported browser.</msg>
 <arg>${URL}</arg>
-<arg>chrome</arg>
+<arg>geckodriver</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-13T16:36:36.647406" elapsed="1.663798"/>
+<status status="FAIL" start="2024-06-17T09:21:25.008496" elapsed="0.010508">ValueError: geckodriver is not a supported browser.</status>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-06-13T16:36:38.311204" level="INFO">Opened practiceautomated testing scroll button page</msg>
-<arg>Opened practiceautomated testing scroll button page</arg>
+<arg>Opened practiceautomated testing nested frame page</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-13T16:36:38.311204" elapsed="0.001006"/>
+<status status="NOT RUN" start="2024-06-17T09:21:25.019004" elapsed="0.000000"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-13T16:36:38.312210" elapsed="0.032164"/>
+<status status="NOT RUN" start="2024-06-17T09:21:25.019752" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-13T16:36:40.345076" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-13T16:36:38.344374" elapsed="2.000702"/>
-</kw>
-<status status="PASS" start="2024-06-13T16:36:36.647406" elapsed="3.697670"/>
-</kw>
-<test id="s1-t1" name="Select a Box and Check it" line="42">
-<kw name="Select a Box">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${SelectBox}</arg>
 <arg>3s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-13T16:36:40.345076" elapsed="0.021405"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-06-13T16:36:40.366481" level="INFO">Selecting options from selection list 'xpath://select' by value Option 2.</msg>
-<arg>xpath:${SelectBox}</arg>
-<arg>${Option}</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-06-13T16:36:40.366481" elapsed="0.049560"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-06-13T16:36:40.417041" level="INFO">Selected 'Option 2'</msg>
-<arg>Selected 'Option 2'</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-13T16:36:40.417041" elapsed="0.000000"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-13T16:36:42.418363" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-13T16:36:40.417041" elapsed="2.001322"/>
+<status status="NOT RUN" start="2024-06-17T09:21:25.019752" elapsed="0.000000"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Result_Text}</arg>
-<arg>5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-06-13T16:36:42.418363" elapsed="0.016418"/>
+<status status="FAIL" start="2024-06-17T09:21:25.008496" elapsed="0.011256">ValueError: geckodriver is not a supported browser.</status>
 </kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-06-13T16:36:42.444766" level="INFO">${Result} = You selected: Option 2</msg>
-<var>${Result}</var>
-<arg>${Result_Text}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-06-13T16:36:42.434781" elapsed="0.009985"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-06-13T16:36:42.444766" level="INFO">Selected the option 1</msg>
-<arg>Selected the option 1</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-06-13T16:36:42.444766" elapsed="0.000000"/>
-</kw>
-<arg>'${Result}' == 'You selected: Option 2'</arg>
-<arg>Log</arg>
-<arg>Selected the option 1</arg>
-<arg>ELSE</arg>
-<arg>Log</arg>
-<arg>failed: The result is correct.</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-06-13T16:36:42.444766" elapsed="0.000000"/>
-</kw>
-<doc>Scroll a button and verifying the result</doc>
-<status status="PASS" start="2024-06-13T16:36:40.345076" elapsed="2.099690"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-06-13T16:36:44.445428" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-06-13T16:36:42.444766" elapsed="2.000897"/>
-</kw>
-<doc>Scroll to button and verifying the action</doc>
-<status status="PASS" start="2024-06-13T16:36:40.345076" elapsed="4.101282"/>
+<test id="s1-t1" name="Test Nested Frame" line="34">
+<doc>Test switching to a nested iframe and verifying text inside it</doc>
+<status status="FAIL" start="2024-06-17T09:21:25.019752" elapsed="0.000784">Parent suite setup failed:
+ValueError: geckodriver is not a supported browser.</status>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-13T16:36:44.450369" elapsed="2.144299"/>
+<status status="PASS" start="2024-06-17T09:21:25.021565" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-06-13T16:36:36.520147" elapsed="10.074521"/>
+<status status="FAIL" start="2024-06-17T09:21:24.878282" elapsed="0.143283">Suite setup failed:
+ValueError: geckodriver is not a supported browser.</status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="SelectBoxPage">SelectBoxPage</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="NestedFramePage">NestedFramePage</stat>
 </suite>
 </statistics>
 <errors>
